@@ -1,0 +1,220 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.Loading-Container {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  background-color: transparent;
+}
+
+.Loading-Box {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.6);
+  border-top: 10px solid #ff3366;
+  animation: none;
+}
+
+@keyframes Loading-Animation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.App {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: repeating-linear-gradient(135deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 10px, transparent 10px, transparent 11px), repeating-linear-gradient(22.5deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 10px, transparent 10px, transparent 11px), linear-gradient(90deg, hsl(194, 74%, 56%), hsl(266, 74%, 56%), hsl(338, 74%, 56%), hsl(50, 74%, 56%), hsl(122, 74%, 56%));
+}
+
+.Attendance-Container {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 250px;
+  color: #391764;
+  border-radius: 12px;
+  align-items: center;
+  flex-direction: column;
+  border: 5px solid #5720a0;
+  background-color: lavender;
+  justify-content: space-around;
+}
+
+.Select-Input-label {
+  position: absolute;
+  top: 38px;
+  font-weight: bold;
+}
+
+#Select-Tag {
+  color: #fff;
+  width: 180px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #391764;
+  margin-top: 35px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  border: 3px solid #ff3366;
+  background-color: antiquewhite;
+}
+
+.DashBoard-NavBar {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 100%;
+  color: #391764;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 0 8px 8px;
+  background-color: rgb(250, 220, 190);
+}
+
+.DashBoard-icon {
+  display: flex;
+  font-size: 40px;
+  border-radius: 50%;
+}
+
+.DashBoard-Container {
+  position: absolute;
+  display: flex;
+  bottom: 40px;
+  width: 100%;
+  height: 72%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.DashBoard-Box {
+  position: relative;
+  display: flex;
+  width: 350px;
+  height: 280px;
+  padding: 10px;
+  cursor: pointer;
+  color: #391764;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: column;
+  background-color: lavender;
+  justify-content: space-around;
+}
+
+.DashBoard-Box:active {
+  transform: scale(0.92);
+}
+
+.LogOut-Icon {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  transform: rotate(-180deg);
+}
+
+.Back-to-DashBoard {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #391764;
+}
+
+.Back-to-DashBoard:active {
+  transform: scale(0.9);
+}
+
+.LogOut-Page {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  color: #391764;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.LogOut-Container {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  width: 300px;
+  height: 160px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  border-radius: 24px;
+  flex-direction: column;
+  border: 5px solid #ff3366;
+  background-color: lavender;
+  justify-content: space-evenly;
+}
+
+.LogOut-Btn {
+  width: 100%;
+  height: auto;
+}
+
+@media (width<=750px) {
+  .DashBoard-Box {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (width<=600px) {
+  .DashBoard-Container {
+    width: 90%;
+    height: 75%;
+    top: 120px;
+    flex-direction: column;
+  }
+
+  .DashBoard-Box {
+    width: 310px;
+    height: 240px;
+  }
+}
